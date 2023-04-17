@@ -1,0 +1,127 @@
+$azul: #003cff;
+$naranja: #ff6701;
+$amarillo: #fb9d00;
+$rojo: #f30006;
+$blanco:#FFF;
+
+
+.navbar {
+  border-top: 3px solid $naranja;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #003cff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: 0.5s all ease;
+
+  &.active {
+    border-top: 1px solid $naranja;
+
+    background-color: rgb(0 84 255 / 54%);
+    backdrop-filter: blur(8px);
+    color: #FFF;
+    .container {padding: 5px 0px;}
+
+    .logo img{ height: 37px;}
+
+    button {
+      background-color: $naranja !important;
+      color: #FFF !important;
+      border: 1px solid $naranja !important;
+      padding: 2px 20px!important;
+      &:hover{ background-color: #ff6701a2!important;
+        border: 1px solid $naranja !important; }
+    }
+  }
+  &.activeBlue{
+    background-color: $azul;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+
+  
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 37px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+
+      span {
+        white-space: nowrap;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .options {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: rgb(255, 255, 255);
+          border-radius: 10px;
+          z-index: 999;
+          border: 1px solid lightgrey;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 200px;
+          font-weight: 300;
+          color: gray;
+        }
+      }
+
+      button {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: #fb9f0000;
+        cursor: pointer;
+
+        &:hover {
+          color:$azul;
+          background-color: #ffffff;
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: calc(100% - 2px);
+    height: 0;
+    border-top: 0.5px solid #ebe9e9;
+    border-bottom: 0.5px solid #ebe9e9;
+  }
+
+  .menu {
+    width: 1400px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+  }
+}

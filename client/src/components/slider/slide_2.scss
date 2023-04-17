@@ -1,0 +1,30 @@
+
+.slider{ 
+    display: flex;
+
+    align-items: end;
+    width: 535px;
+    background-color: rgba(255, 0, 0, 0);
+    height: 100%;
+    @media screen and (max-width: 1207px) { 
+        width: 515px;}
+    @media screen and (max-width: 1145px) { 
+     width: 355px;}
+
+.imagen{
+    position:absolute;
+    height: 479px;
+    width: auto;
+    @media screen and (max-width: 1475px) { 
+        height: 401px;} 
+    @media screen and (max-width: 1207px) { 
+        height: 355px;} 
+    @media screen and (max-width: 1145px) { 
+        height: 247px;} 
+   
+    
+  
+}
+
+
+}

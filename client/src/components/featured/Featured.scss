@@ -1,0 +1,267 @@
+$azul: #003cff;
+$naranja: #f87501;
+$amarillo: #fb9d00;
+$rojo: #f30006;
+$blanco:#FFF;
+
+.featured_f {
+  height: 501px;
+  display: flex;
+  justify-content: space-between;
+  background:radial-gradient(circle at 71% 118%, rgb(40, 163, 254) 4%, rgb(40, 123, 254) 15%, rgb(0, 60, 255) 34%);
+  color: white;
+  border-bottom: 7px solid $naranja;
+  padding: 0 3%;
+  width: auto;
+  @media screen and (max-width: 1475px) 
+  {height: 437px!important}
+  @media screen and (max-width: 1207px) 
+  {height: 379px!important}
+  @media screen and (max-width: 1145px) 
+  {height: 267px!important}
+
+  .container_f {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 99px;
+    @media screen and (max-width: 1475px) 
+    { width: 1088px;gap:1px;}
+    @media screen and (max-width: 1207px) 
+    { width: 100%;gap:1px;}
+    @media screen and (max-width: 1145px) 
+    { width: 100%;
+      justify-content:center;
+      gap: 9%!important}
+      @media screen and (max-width: 911px) 
+      { gap:3px!important}
+      @media screen and (max-width: 811px) 
+      {flex-direction: column; }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 47px;
+      padding-left: 4%;
+      width: 961px;
+       @media screen and (max-width: 1475px) 
+       {gap:31px!important}
+       @media screen and (max-width: 1145px) 
+       {gap:11px!important;
+        
+        padding-left: 3%;
+        width: 511px; 
+        // background-color: red;
+      }
+      @media screen and (max-width: 650px) { 
+        width: 397px;
+       } 
+    
+
+      h1 {
+        font-size: 53px;
+        @media screen and (max-width: 1475px) 
+        {font-size: 43px!important;
+        line-height: 55px;}
+        @media screen and (max-width: 1207px) { 
+          font-size: 41px!important;
+            line-height: 47px;}
+        @media screen and (max-width: 1145px) { 
+          font-size: 29px!important;
+            line-height: 37px;}
+        span {
+         color:$naranja;
+          font-weight: 300;
+          font-size: 77px;
+          line-height: 1px;
+        }
+      }
+
+      .search {
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 98%;
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+
+          input {
+            border: none;
+            outline: none; width: 100%;
+
+            &::placeholder {
+              color: gray;
+            }
+          }
+        }
+
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #ff6600;
+          color: white;
+          align-self:flex-start;
+          cursor: pointer;
+        }
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media screen and (max-width: 650px) { 
+        display: none;
+         } 
+        span {
+          width: max-content;
+          @media screen and (max-width: 1145px) {
+          font-size: 11px;
+          }
+        }
+
+        button {
+          width: max-content;
+          color: white;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: transparent;
+          font-size: 14px;
+          @media screen and (max-width: 1145px) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .right {
+      height: 100%;
+      
+      @media screen and (max-width: 911px) 
+      { display: none;}
+
+
+
+      
+    }
+  }
+}
+
+// @media screen and (max-width: 1475px) {
+//   .featured_f {
+//     height: 495px;
+//     display: flex;
+//     justify-content: center;
+//     background:radial-gradient(circle at 71% 118%, rgb(40, 163, 254) 4%, rgb(40, 123, 254) 15%, rgb(0, 60, 255) 34%);
+//     color: white;
+//     border-bottom: 7px solid $naranja;
+//     padding: 0 5%;
+  
+//     .container_f {
+//       width: 1279px;
+//       display: flex;
+//       align-items: center;
+  
+//       .left {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 50px;
+//         width: 537px;
+//         padding-left: 2%;
+  
+//         h1 {
+//           font-size: 40px;
+  
+//           span {
+//            color:$naranja;
+//             font-weight: 300;
+//             font-size: 77px;
+//             line-height: 1px;
+//           }
+//         }
+  
+//         .search {
+//           background-color: white;
+//           border-radius: 5px;
+//           display: flex;
+//           align-items: center;
+//           justify-content: space-between;
+//           overflow: hidden;
+  
+//           .searchInput {
+//             display: flex;
+//             align-items: center;
+//             gap: 10px;
+//             width: 98%;
+//             img {
+//               width: 20px;
+//               height: 20px;
+//               margin: 10px;
+//             }
+  
+//             input {
+//               border: none;
+//               outline: none; width: 100%;
+  
+//               &::placeholder {
+//                 color: gray;
+//               }
+//             }
+//           }
+  
+//           button {
+//             width: 120px;
+//             height: 50px;
+//             border: none;
+//             background-color: #ff6600;
+//             color: white;
+//             align-self:flex-start;
+//             cursor: pointer;
+//           }
+//         }
+  
+//         .popular {
+//           display: flex;
+//           align-items: center;
+//           gap: 10px;
+  
+//           span {
+//             width: max-content;
+//           }
+  
+//           button {
+//             width: max-content;
+//             color: white;
+//             border: 1px solid white;
+//             padding: 5px 10px;
+//             border-radius: 20px;
+//             background-color: transparent;
+//             font-size: 14px;
+//           }
+//         }
+//       }
+  
+//       .right {
+//         height: 100%;
+//         width: 517px;
+        
+//       }
+//     }
+//   }
+//   }
+
+
+
