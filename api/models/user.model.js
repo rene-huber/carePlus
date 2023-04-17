@@ -20,7 +20,7 @@ const userSchema = new Schema({
     type: String,
     required: false,
   },
-  country: {
+  languaje: {
     type: String,
     required: false,
   },

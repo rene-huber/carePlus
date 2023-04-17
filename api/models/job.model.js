@@ -43,22 +43,7 @@ const jobSchema = new Schema(
       type: String,
       required: true,
     },
-    shortTitle: {
-      type: String,
-      required: true,
-    },
-    shortDesc: {
-      type: String,
-      required: true,
-    },
-    deliveryTime: {
-      type: Number,
-      required: true,
-    },
-    revisionNumber: {
-      type: Number,
-      required: true,
-    },
+    
     features: {
       type: [String],
       required: false,

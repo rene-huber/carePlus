@@ -62,37 +62,39 @@ const Add = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     mutation.mutate(state);
-    // navigate("/myjobs")
+    navigate("/myjobs")
   };
 
   return (
     <div className="add">
       <div className="container">
-        <h1>Add New Job</h1>
+        <h1>Neue Stelle hinzufügen</h1>
         <div className="sections">
           <div className="info">
-            <label htmlFor="">Title</label>
+            <label htmlFor="">Name und Vorname</label>
             <input
               type="text"
               name="title"
-              placeholder="e.g. I will do something I'm really good at"
+              placeholder="Alber Einstein"
               onChange={handleChange}
             />
-            <label htmlFor="">Category</label>
+            <label htmlFor="">Kategorie</label>
             <select name="cat" id="cat" onChange={handleChange}>
-              <option value="design">Design</option>
-              <option value="web">Web Development</option>
-              <option value="animation">Animation</option>
-              <option value="music">Music</option>
+              <option value="null">Wähle ein</option>
+              <option value="kinderbetreuung">Kinderbetreuung</option>
+              <option value="aupair">Au-pair</option>
+              <option value="seniorenbetreuung">Seniorenbetreuung</option>
+              <option value="tierbetreuung">Tierbetreuung</option>
+              <option value="haushalshilfe">Haushalshilfe</option>
             </select>
             <div className="images">
               <div className="imagesInputs">
-                <label htmlFor="">Cover Image</label>
+                <label htmlFor="">Titelbild</label>
                 <input
                   type="file"
                   onChange={(e) => setSingleFile(e.target.files[0])}
                 />
-                <label htmlFor="">Upload Images</label>
+                <label htmlFor="">Galeriebilder (max 3)</label>
                 <input
                   type="file"
                   multiple
@@ -103,45 +105,20 @@ const Add = () => {
                 {uploading ? "uploading" : "Upload"}
               </button>
             </div>
-            <label htmlFor="">Description</label>
+            <label htmlFor="">kurze Beschreibung über Sie</label>
             <textarea
               name="desc"
               id=""
-              placeholder="Brief descriptions to introduce your service to customers"
+              placeholder="Stellen Sie Ihren Service dem Kunden vor"
               cols="0"
               rows="16"
               onChange={handleChange}
             ></textarea>
-            <button onClick={handleSubmit}>Create</button>
-          </div>
-          <div className="details">
-            <label htmlFor="">Service Title</label>
-            <input
-              type="text"
-              name="shortTitle"
-              placeholder="e.g. One-page web design"
-              onChange={handleChange}
-            />
-            <label htmlFor="">Short Description</label>
-            <textarea
-              name="shortDesc"
-              onChange={handleChange}
-              id=""
-              placeholder="Short description of your service"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <label htmlFor="">Delivery Time (e.g. 3 days)</label>
-            <input type="number" name="deliveryTime" onChange={handleChange} />
-            <label htmlFor="">Revision Number</label>
-            <input
-              type="number"
-              name="revisionNumber"
-              onChange={handleChange}
-            />
-            <label htmlFor="">Add Features</label>
+
+   
+<label htmlFor="">Postleitzahl, wo Sie arbeiten können</label>
             <form action="" className="add" onSubmit={handleFeature}>
-              <input type="text" placeholder="e.g. page design" />
+              <input type="text" placeholder="10405 oder Prenzlauerberg" />
               <button type="submit">add</button>
             </form>
             <div className="addedFeatures">
@@ -158,9 +135,13 @@ const Add = () => {
                 </div>
               ))}
             </div>
-            <label htmlFor="">Price</label>
+
+            <label htmlFor="">Ungefährer Preis pro Stunde</label>
             <input type="number" onChange={handleChange} name="price" />
+
+            <button onClick={handleSubmit}>Create</button>
           </div>
+        
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ export const deletejob = async (req, res, next) => {
       return next(createError(403, "You can delete only your job!"));
 
     await Job.findByIdAndDelete(req.params.id);
-    res.status(200).send("Jobhas been deleted!");
+    res.status(200).send("Job has been deleted!");
   } catch (err) {
     next(err);
   }
@@ -32,7 +32,7 @@ export const deletejob = async (req, res, next) => {
 export const getjob = async (req, res, next) => {
   try {
     const job = await Job.findById(req.params.id);
-    if (!job) next(createError(404, "Jobnot found!"));
+    if (!job) next(createError(404, "Job not found!"));
     res.status(200).send(job);
   } catch (err) {
     next(err);
@@ -49,7 +49,13 @@ export const getjobs = async (req, res, next) => {
         ...(q.max && { $lt: q.max }),
       },
     }),
-    ...(q.search && { title: { $regex: q.search, $options: "i" } }),
+    ...(q.search && { $or: [
+      { title: { $regex: q.search, $options: "i" } },
+      { cat: { $regex: q.search, $options: "i" } },
+      { features: { $regex: q.search, $options: "i" } }
+    ]}),
+  
+   
   };
   try {
     const jobs = await Job.find(filters).sort({ [q.sort]: -1 });
@@ -66,7 +72,7 @@ export const updatejob = async (req, res, next) => {
 
   try {
     const job = await Job.findById(id);
-    if (!job) return next(createError(404, "Jobnot found"));
+    if (!job) return next(createError(404, "Job not found"));
 
     // check if the job belongs to the user
     if (job.userId !== req.userId) {
