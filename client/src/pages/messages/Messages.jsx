@@ -40,14 +40,14 @@ const Messages = () => {
       ) : (
         <div className="container">
           <div className="title">
-            <h1>Messages</h1>
+            <h1>Mitteilungen</h1>
           </div>
           <table>
             <tr>
-              <th>{currentUser.isSeller ? "Buyer" : "Seller"}</th>
-              <th>Last Message</th>
-              <th>Date</th>
-              <th>Action</th>
+              <th>{currentUser.isSeller ? "Kunde" : "Seller"}</th>
+              <th>Letzte Nachricht</th>
+              <th>Datum</th>
+              <th>Aktion</th>
             </tr>
             {data.map((c) => (
               <tr

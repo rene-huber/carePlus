@@ -113,8 +113,8 @@ function Job() {
                   
                   
                     <div className="item">
-                      <span className="title">Languages</span>
-                      <span className="desc">English - Spanish - German</span>
+                      <span className="title">Sprachen</span>
+                      <span className="desc">Englisch - Spanisch - Deutsch</span>
                     </div>
                   </div>
                  
@@ -132,7 +132,7 @@ function Job() {
             </div> */}
 
             <div className="price"><Link to={`/pay/${id}`}>
-            <button>Continue</button>
+            <button>fortsetzen</button>
             </Link>
             <h4>pro Stunde € {data.price}</h4>
             </div>

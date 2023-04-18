@@ -42,14 +42,14 @@ const Orders = () => {
       ) : (
         <div className="container">
           <div className="title">
-            <h1>Orders</h1>
+            <h1>Aufträge</h1>
           </div>
           <table>
             <tr>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Contact</th>
+              <th>Bild</th>
+              <th>Titel</th>
+              <th>Preis</th>
+              <th>kontakt</th>
             </tr>
             {data.map((order) => (
               <tr key={order._id}>

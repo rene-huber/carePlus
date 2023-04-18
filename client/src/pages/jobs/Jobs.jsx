@@ -68,22 +68,22 @@ function Jobs() {
             <span>Budget</span>
             <input ref={minRef} type="number" placeholder="min" />
             <input ref={maxRef} type="number" placeholder="max" />
-            <button onClick={apply}>Apply</button>
+            <button onClick={apply}>Suche</button>
           </div>
           <div className="right">
-            <span className="sortBy">Sort by</span>
+            <span className="sortBy">Sortiere nach</span>
             <span className="sortType">
-              {sort === "sales" ? "Best Selling" : "Newest"}
+              {sort === "sales" ? "Beliebt" : "Neueste"}
             </span>
             <img src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
             {open && (
               <div className="rightMenu">
                 {sort === "sales" ? (
-                  <span onClick={() => reSort("createdAt")}>Newest</span>
+                  <span onClick={() => reSort("createdAt")}>Neueste</span>
                 ) : (
-                  <span onClick={() => reSort("sales")}>Best Selling</span>
+                  <span onClick={() => reSort("sales")}>Beliebt</span>
                 )}
-                <span onClick={() => reSort("sales")}>Popular</span>
+                {/* <span onClick={() => reSort("sales")}>Popular2</span> */}
               </div>
             )}
           </div>

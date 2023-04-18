@@ -73,18 +73,18 @@ function Navbar() {
                         Jobs
                       </Link>
                       <Link className="link" to="/add">
-                        Add New Jobs
+                      Neuen Job hinzufügen
                       </Link>
                     </>
                   )}
                   <Link className="link" to="/orders">
-                    Orders
+                  Aufträge
                   </Link>
                   <Link className="link" to="/messages">
-                    Messages
+                  Mitteilungen
                   </Link>
                   <Link className="link" onClick={handleLogout}>
-                    Logout
+                  Ausloggen
                   </Link>
                 </div>
               )}

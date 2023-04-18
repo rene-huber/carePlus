@@ -41,11 +41,11 @@ const Review = ({ review }) => {
       </div>
       <p>{review.desc}</p>
       <div className="helpful">
-        <span>Helpful?</span>
+        <span>Hilfreich?</span>
         <img src="/img/like.png" alt="" />
-        <span>Yes</span>
+        <span>Ja</span>
         <img src="/img/dislike.png" alt="" />
-        <span>No</span>
+        <span>Nein</span>
       </div>
     </div>
   );
