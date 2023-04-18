@@ -19,7 +19,7 @@ function Job() {
       }),
     });
     
-    console.log(data);
+ 
   const userId = data?.userId;
 
   const {
@@ -45,19 +45,14 @@ function Job() {
         <div className="container">
           <div className="left">
            
-            <h1>{data.title}</h1>
-            {isLoadingUser ? (
+           
+            {/* {isLoadingUser ? (
               "loading"
             ) : errorUser ? (
               "Something went wrong!"
             ) : (
-              <div className="user">
-                <img
-                  className="pp"
-                  src={dataUser.img || "/img/noavatar.jpg"}
-                  alt=""
-                />
-                <span>{dataUser.username}</span>
+              <div className="user"> <h1>{data.title}</h1>
+               
                 {!isNaN(data.totalStars / data.starNumber) && (
                   <div className="stars">
                     {Array(Math.round(data.totalStars / data.starNumber))
@@ -69,25 +64,29 @@ function Job() {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
             <Carousel showArrows={true}>
               {data.images.map((img) => (
                 <img key={img} src={img} alt="" />
               ))}
             </Carousel>
-            <h2>About This Job</h2>
-            <p>{data.desc}</p>
-            {isLoadingUser ? (
+           
+           
+            <Reviews jobId={id} />
+          </div>
+          <div className="right">
+          {isLoadingUser ? (
               "loading"
             ) : errorUser ? (
               "Something went wrong!"
             ) : (
               <div className="seller">
-                <h2>About The Seller</h2>
+              <div className="box">
+              <img src={dataUser.img || "/img/noavatar.jpg"} alt="" />
                 <div className="user">
-                  <img src={dataUser.img || "/img/noavatar.jpg"} alt="" />
+                 
                   <div className="info">
-                    <span>{dataUser.username}</span>
+                    <h2>{data.title}</h2>
                     {!isNaN(data.totalStars / data.starNumber) && (
                       <div className="stars">
                         {Array(Math.round(data.totalStars / data.starNumber))
@@ -100,66 +99,47 @@ function Job() {
                         </span>
                       </div>
                     )}
-                    <button>Contact Me</button>
+                    <h5>Über mich</h5>
+            <p>{data.desc}</p>
                   </div>
                 </div>
-                <div className="box">
+                {/* <div className="box"> */}
                   <div className="items">
+                   
                     <div className="item">
-                      <span className="title">From</span>
-                      <span className="desc">{dataUser.country}</span>
+                      <span className="title">Mitglied seit</span>
+                      <span className="desc">Feb 2023</span>
                     </div>
-                    <div className="item">
-                      <span className="title">Member since</span>
-                      <span className="desc">Aug 2022</span>
-                    </div>
-                    <div className="item">
-                      <span className="title">Avg. response time</span>
-                      <span className="desc">4 hours</span>
-                    </div>
-                    <div className="item">
-                      <span className="title">Last delivery</span>
-                      <span className="desc">1 day</span>
-                    </div>
+                  
+                  
                     <div className="item">
                       <span className="title">Languages</span>
-                      <span className="desc">English</span>
+                      <span className="desc">English - Spanish - German</span>
                     </div>
                   </div>
-                  <hr />
-                  <p>{dataUser.desc}</p>
+                 
+                  {/* <p>{dataUser.desc}</p> */}
                 </div>
               </div>
             )}
-            <Reviews jobId={id} />
-          </div>
-          <div className="right">
-            <div className="price">
-              <h3>{data.shortTitle}</h3>
-              <h2>$ {data.price}</h2>
-            </div>
-            <p>{data.shortDesc}</p>
-            <div className="details">
-              <div className="item">
-                <img src="/img/clock.png" alt="" />
-                <span>{data.deliveryDate} Days Delivery</span>
-              </div>
-              <div className="item">
-                <img src="/img/recycle.png" alt="" />
-                <span>{data.revisionNumber} Revisions</span>
-              </div>
-            </div>
-            <div className="features">
+            {/* <div className="features">
               {data.features.map((feature) => (
                 <div className="item" key={feature}>
                   <img src="/img/greencheck.png" alt="" />
                   <span>{feature}</span>
                 </div>
               ))}
-            </div>
-            <Link to={`/pay/${id}`}>
+            </div> */}
+
+            <div className="price"><Link to={`/pay/${id}`}>
             <button>Continue</button>
             </Link>
+            <h4>pro Stunde € {data.price}</h4>
+            </div>
+          
+           
+            
+            
           </div>
         </div>
       )}

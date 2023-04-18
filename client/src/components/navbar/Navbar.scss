@@ -38,6 +38,7 @@ $blanco:#FFF;
   }
   &.activeBlue{
     background-color: $azul;
+    .logo img{ height: 35px;}
   }
 
   .container {
@@ -45,7 +46,7 @@ $blanco:#FFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0px;
+    padding: 9px 0px;
 
   
     .links {

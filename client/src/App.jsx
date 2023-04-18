@@ -12,7 +12,6 @@ import Add from "./pages/add/Add";
 import Orders from "./pages/orders/Orders";
 import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
-// import Myjobs from "./pages/myJobs/Myjobs";
 import Myjobs from "./pages/myJobs/MyJobs";
 import {
   QueryClient,

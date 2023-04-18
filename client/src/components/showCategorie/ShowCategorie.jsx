@@ -13,7 +13,7 @@ function ShowCategorie() {
   return (
     <div className="grid">
       <div className="caja">
-        <Link to="/jobs?cat=web">
+        <Link to="/jobs?cat=kinderbetreuung">
           <motion.img
             src={babysitter}
             alt="Descripción de la imagen"
@@ -24,7 +24,7 @@ function ShowCategorie() {
         </Link>
       </div>
       <div className="caja">
-        <Link to="/">
+        <Link to="/jobs?cat=aupair">
           <motion.img
             src={aupair}
             alt="Descripción de la imagen"
@@ -35,7 +35,7 @@ function ShowCategorie() {
         </Link>
       </div>
       <div className="caja">
-        <Link to="/">
+        <Link to="/jobs?cat=seniorenbetreuung">
           <motion.img
             src={senior}
             alt="Descripción de la imagen"
@@ -46,7 +46,7 @@ function ShowCategorie() {
         </Link>
       </div>
       <div className="caja">
-        <Link to="/">
+        <Link to="/jobs?cat=tierbetreuung">
           <motion.img
             src={pet}
             alt="Descripción de la imagen"
@@ -57,7 +57,7 @@ function ShowCategorie() {
         </Link>
       </div>
       <div className="caja">
-        <Link to="/">
+        <Link to="/jobs?cat=haushalshilfe">
           <motion.img
             src={raumen}
             alt="Descripción de la imagen"

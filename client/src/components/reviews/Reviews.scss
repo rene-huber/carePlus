@@ -1,5 +1,8 @@
 .reviews {
-  margin-top: 50px;
+  margin-top: 3px;
+  padding: 26px;
+  border: 1px solid #000;
+  border-radius: 21px;
 
   .add {
     margin-top: 20px;
@@ -27,7 +30,7 @@
         border: none;
         padding: 10px;
         color: white;
-        background-color: #1dbf73;
+        background-color: #003cff;
         cursor: pointer;
       }
     }

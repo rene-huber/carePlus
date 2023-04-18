@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Jobs.scss";
-import JobCard from "../../components/jobCard/jobCard";
+import JobCard from "../../components/jobCard/JobCard";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import { useLocation } from "react-router-dom";
@@ -13,6 +13,9 @@ function Jobs() {
 
   const { search } = useLocation();
 
+  function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["jobs"],
@@ -25,10 +28,7 @@ function Jobs() {
           return res.data;
         }),
   });
-
-
-
-  const reSort = (type) => {
+ const reSort = (type) => {
     setSort(type);
     setOpen(false);
   };
@@ -41,13 +41,27 @@ function Jobs() {
     refetch();
   };
 
+  const kate= data
+  // console.log(kate[0].cat);
+
   return (
     <div className="jobs">
       <div className="container">
+      <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>Something went wrong!</p>
+      ) : (
+        <div>
+        <h1><span style={{color:"#ccc"}}>Kategorie: </span>{capitalizeFirstLetter(kate[0].cat)}</h1>
         
-        <h1>AI Artists</h1>
+        </div>
+      )}
+    </div>
+      
         <p>
-          Explore the boundaries of art and technology with  AI artists
+        Entdecken Sie mit Ihren Vorlieben die Option, die am besten zu Ihnen passt.
         </p>
         <div className="menu">
           <div className="left">

@@ -116,9 +116,9 @@ const Add = () => {
             ></textarea>
 
    
-<label htmlFor="">Postleitzahl, wo Sie arbeiten können</label>
+<label htmlFor="">Postleitzahl, wo Sie arbeiten können und Tags</label>
             <form action="" className="add" onSubmit={handleFeature}>
-              <input type="text" placeholder="10405 oder Prenzlauerberg" />
+              <input type="text" placeholder="10405, Prenzlauerberg, Dogs" />
               <button type="submit">add</button>
             </form>
             <div className="addedFeatures">

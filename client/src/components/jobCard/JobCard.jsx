@@ -11,14 +11,12 @@ const jobCard = ({ item }) => {
       newRequest.get(`/users/${item.userId}`).then((res) => {
         return res.data;
       }),
-  }); console.log(item);
+  }); 
   return (
     <Link to={`/job/${item._id}`} className="link">
       <div className="jobCard">
         <img src={item.cover} alt="" />
         <div className="info">
-        <h2>{item.title}</h2>
-          <p>{item.desc}</p>
           {isLoading ? (
             "loading"
           ) : error ? (
@@ -26,23 +24,25 @@ const jobCard = ({ item }) => {
           ) : (
             <div className="user">
               <img src={data.img || "/img/noavatar.jpg"} alt="" />
-              <span>{data.username}</span>
-            </div>
-          )}
-          
-          <div className="star">
+              <span>{item.title}</span>
+              <div className="star">
             <img src="./img/star.png" alt="" />
             <span>
               {!isNaN(item.totalStars / item.starNumber) &&
                 Math.round(item.totalStars / item.starNumber)}
             </span>
           </div>
+            </div>
+          )}
+          <hr />
+          <p>{item.desc.slice(0, 115)} read more</p>
+          
         </div>
-        <hr />
+ 
         <div className="detail">
-          <img src="./img/heart.png" alt="" />
+          <div className="corazon"><img src="./img/heart.png" alt="" /></div>
           <div className="price">
-            <span>STARTING AT</span>
+            <span>Pro Stunde</span>
             <h2>$ {item.price}</h2>
           </div>
         </div>
