@@ -1,6 +1,7 @@
 import React from "react";
 import Social from "../redes/Social";
 import Phone from "../phone/Phone";
+import { Link } from "react-router-dom";
 
 function JobHome() {
   return (
@@ -43,7 +44,9 @@ function JobHome() {
               entsprechen (kostenpflichtige Dienste).
             </p>
           </div>
+          <Link to="/register"> 
           <button>Jetzt registrieren</button>
+          </Link>
         </div>
       </div>
       <div className="phone">
@@ -80,7 +83,9 @@ function JobHome() {
               Je mehr positive Bewertungen Sie haben, desto mehr Möglichkeiten haben Sie!
               </p>
             </div>
+            <Link to="/register">
             <button>Als Helfer registrieren</button>
+            </Link>
           </div>
         </div>
       </div>
