@@ -17,7 +17,7 @@ function ShowCategorie() {
           <motion.img
             src={babysitter}
             alt="Descripción de la imagen"
-            initial={{  y: "10%" }}
+            initial={{  y: "3%" }}
             animate={{  y: 0 }}
             transition={{ duration: 0.3 }}
           />
@@ -28,7 +28,7 @@ function ShowCategorie() {
           <motion.img
             src={aupair}
             alt="Descripción de la imagen"
-            initial={{  y: "10%" }}
+            initial={{  y: "3%" }}
             animate={{  y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
           />
@@ -39,7 +39,7 @@ function ShowCategorie() {
           <motion.img
             src={senior}
             alt="Descripción de la imagen"
-            initial={{  y: "10%" }}
+            initial={{  y: "3%" }}
             animate={{  y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           />
@@ -50,7 +50,7 @@ function ShowCategorie() {
           <motion.img
             src={pet}
             alt="Descripción de la imagen"
-            initial={{  y: "10%" }}
+            initial={{  y: "3%" }}
             animate={{  y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
           />
@@ -61,7 +61,7 @@ function ShowCategorie() {
           <motion.img
             src={raumen}
             alt="Descripción de la imagen"
-            initial={{  y: "10%" }}
+            initial={{  y: "3%" }}
             animate={{  y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           />
